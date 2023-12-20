@@ -1,0 +1,91 @@
+.secondmain{
+    height: 200vh;
+    width: 100vw;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+.secondp1cont{
+    height: 70vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    
+}
+.secondp1cont video{
+    height: 100%;
+}
+.secondp1cont-txt{
+    height: 60%;
+    width: 40%;
+    margin:0 6vw;
+}
+.secondp1cont-txt h1{
+    font-size: 3vw;
+}
+.secondp1cont-txt p{
+    font-size: 1.2vw;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+}
+.slider{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+.slider1inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sliderHeading{
+    height: 15vh;
+    color: black;
+    display: flex;
+    font-size: 1.4vw;
+    align-items: center;
+    padding-left: 7.5vw;
+    background-color: rgb(255, 255, 255);
+}
+.sliderImg{
+    height: 60vh;
+    width: 85vw;
+    background-color: black;
+    margin: auto;
+   overflow: hidden;
+}
+.sliderImg img{
+    height: 100%;
+ 
+}
+.sliderCarddiv{  
+    height: 45vh;
+    background-color: black;
+    display: flex;
+    
+}
+.card{
+height: 100%;
+width: 21.25vw;
+padding: 1.5vw;
+flex-shrink: 0;
+background-color: rgb(255, 255, 255);
+overflow: hidden;
+color: black;
+}
+.card :active{
+    margin-top: -10px;
+}
+.card h3{
+    word-wrap: break-word;
+    line-height: 0;
+    font-size: 1.6vw;
+    font-weight: 600;
+    font-family: 'Dosis', sans-serif;
+}
+.card p{
+    font-size: 1vw;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(0, 0, 0);
+}
