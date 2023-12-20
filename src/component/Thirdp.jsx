@@ -37,10 +37,10 @@ const Thirdp = () => {
             since 1963, as have sports cars with astonishing performance.{" "}
           </p>
         </div>
-       <video poster="public/grayCarpre.webp" autoPlay muted loop src="public/grayCarVid.mp4"></video>
+       <video poster="/grayCarpre.webp" autoPlay muted loop src="public/grayCarVid.mp4"></video>
       </div>
       <div className="thirdpinner2">
-        <img src="public/porsche-normal.webp" alt="" />
+        <img src="/porsche-normal.webp" alt="" />
        <div className="darkfront"></div>
       </div>
       <div className="uppermover">
