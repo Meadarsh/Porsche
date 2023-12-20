@@ -65,7 +65,7 @@ const Secondp = () => {
          <div className='slider1inner'>
             <h2 onClick={PrevImg}>Prev</h2>
          <div className="sliderImg">  
-          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
          </div>
          <h2 onClick={NextImg}>Next</h2>
          </div>
