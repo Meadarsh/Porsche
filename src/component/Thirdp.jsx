@@ -7,24 +7,21 @@ const Thirdp = () => {
     gsap.registerPlugin(ScrollTrigger)
     useEffect(()=>{
         gsap.to('.thirdpinner2',{
-          backgroundColor:'green',
           scrollTrigger:{
             trigger:'.thirdpinner2',
             start:'top top',
-            end:'160% bottom ',
+            end:'130% bottom ',
             scrub:1,
             pin:true,
-            markers:true,
            
           }}),
         gsap.to('.darkfront',{
           opacity:.6,
           scrollTrigger:{
             trigger:'.thirdpinner2',
-            start:'10 top',
+            start:'top top',
             end:'130% bottom ',
             scrub:1,
-            markers:true,
            
           }
         })

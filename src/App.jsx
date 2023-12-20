@@ -21,7 +21,7 @@ export function App() {
        
       });
     }})
-  const [degraded, degrade] = useState(false)
+  const [degraded, degrade] = useState(true)
   return (
    
    
@@ -35,7 +35,7 @@ export function App() {
       {/** PerfMon will detect performance issues */}
       <PerformanceMonitor onDecline={() => degrade(true)} />
       {/* Renders contents "live" into a HDRI environment (scene.environment). */}
-      <Environment frames={degraded ? 1 : Infinity} resolution={256} background blur={1}>
+      <Environment frames={degraded ? 1 :60} resolution={50} background blur={1}>
         <Lightformers />
       </Environment>
       <CameraRig />

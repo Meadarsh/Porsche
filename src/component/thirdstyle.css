@@ -1,6 +1,7 @@
 .thirdpmain{
     width: 100vw;
-    height: 234vh;
+    height: 205vh;
+    background-color: rgb(0, 0, 0);
     position: relative;
 }
 .thirdpinner1{
@@ -40,7 +41,7 @@
 .uppermover{
     width: 60vw;
     position: absolute;
-    top: 70%;
+    top: 80%;
     font-size: 1.5vw;
     margin-left: 6vw;
 }
