@@ -1,7 +1,7 @@
 .secondmain{
-    height: 200vh;
+    height: 198vh;
     width: 100vw;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
 }
 .secondp1cont{
@@ -29,7 +29,7 @@
     font-family: 'Dosis', sans-serif;
 }
 .slider{
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
 }
@@ -37,7 +37,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 0 20px;
+    color: black;
+    background-color: black;
+    font-size: 3vw;
+}
+.myCustomIcon{
+    color: aqua;
 }
 .sliderHeading{
     height: 15vh;
@@ -61,7 +67,7 @@
 }
 .sliderCarddiv{  
     height: 45vh;
-    background-color: black;
+    
     display: flex;
     
 }
@@ -74,12 +80,9 @@ background-color: rgb(255, 255, 255);
 overflow: hidden;
 color: black;
 }
-.card :active{
-    margin-top: -10px;
-}
+
 .card h3{
     word-wrap: break-word;
-    line-height: 0;
     font-size: 1.6vw;
     font-weight: 600;
     font-family: 'Dosis', sans-serif;

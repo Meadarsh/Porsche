@@ -1,0 +1,46 @@
+.thirdpmain{
+    width: 100vw;
+    height: 234vh;
+    position: relative;
+}
+.thirdpinner1{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.thirdpinner1-txt{
+    height: 70%;
+    margin-left: 5vw;
+    width: 25%;
+    font-family: 'Dosis', sans-serif;
+
+}
+.thirdpinner1-txt h1{
+   font-size: 2.8vw;
+}
+.thirdpinner1 video{
+    height: 75vh;
+}
+.thirdpinner2{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.darkfront{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    background-color: rgb(0, 0, 0);
+}
+.uppermover{
+    width: 60vw;
+    position: absolute;
+    top: 70%;
+    font-size: 1.5vw;
+    margin-left: 6vw;
+}

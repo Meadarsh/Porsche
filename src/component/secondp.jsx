@@ -1,10 +1,9 @@
 import React, { useEffect, useState,useRef } from 'react'
 import './secondstyle.css'
 import { Data } from './slider'
+import { BsArrowLeftCircle ,BsArrowRightCircle} from "react-icons/bs";
 import gsap from 'gsap'
 const Secondp = () => {
-   const CardRef=useRef()
-    
    const[imgIndex,setImgIndex]=useState(1)
    function PrevImg(){
       if(imgIndex>1){
@@ -18,19 +17,25 @@ const Secondp = () => {
    }
    let value;
    useEffect(()=>{
-      if(CardRef.current){
-         const Card = CardRef.current.key;
-         console.log(Card)
-      }
+      console.log(Data)
 
      if(imgIndex<7)
      { value=7.5-((imgIndex-1)*21.25)}
      if(imgIndex>=7)
      { value=7.5-(5*21.25)}
-    
+     gsap.to(`.card`,{
+      y:0,
+      zIndex:1,
+      boxShadow: 'rgba(0, 0, 0, 0) 0px 0px 0px'
+     })
+     gsap.to(`.card${imgIndex}`,{
+      y:-20,
+      zIndex:10,
+      boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+     })
      gsap.to('.sliderCarddiv',{
      x:`${value}vw`,
-     duration:1
+     duration:.3
      })
      gsap.from('.sliderImg img',{
       opacity:0
@@ -63,15 +68,15 @@ const Secondp = () => {
             </h1>
          </div>
          <div className='slider1inner'>
-            <h2 onClick={PrevImg}>Prev</h2>
+         <BsArrowLeftCircle onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
          </div>
-         <h2 onClick={NextImg}>Next</h2>
+         <BsArrowRightCircle onClick={NextImg}/>
          </div>
          <div className="sliderCarddiv">
            {Data.map((e)=>(
-            <div ref={CardRef}  key={e.index} className="card" onClick={()=>setImgIndex(e.index)}>
+            <div key={e.index} className={`card card${e.index}`} onClick={()=>setImgIndex(e.index)}>
                <h3>{e.Title}</h3>
                <p>
                   {e.Discription}
