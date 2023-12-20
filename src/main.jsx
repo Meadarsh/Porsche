@@ -10,7 +10,7 @@ import Secondp from './component/secondp'
 createRoot(document.getElementById('root')).render(
   <>
     <div className='firstpdiv'>
-  <div className="canvasdiv"></div> 
+  <div className="canvasdiv"><App/></div> 
    <FirstPage/>
       </div>
       <Secondp/>
