@@ -17,7 +17,7 @@ const Secondp = () => {
    }
    let value;
    useEffect(()=>{
-      console.log(Data)
+    
 
      if(imgIndex<7)
      { value=7.5-((imgIndex-1)*21.25)}
@@ -42,7 +42,7 @@ const Secondp = () => {
      })
      gsap.to('.sliderImg img',{
       opacity:1,
-      duration:.5
+      duration:.8
      })
    },[imgIndex])
   return (
@@ -70,7 +70,7 @@ const Secondp = () => {
          <div className='slider1inner'>
          <BsArrowLeftCircle onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
          </div>
          <BsArrowRightCircle onClick={NextImg}/>
          </div>

@@ -1,5 +1,56 @@
 .Fourthmain{
- height: 60vh;
+ height: 100vh;
  width: 100vw;
- background-color: aqua;
+ overflow: hidden;
+ background-color: rgb(0, 0, 0);
+ position:relative;
+}
+.Fourthmain img{
+    width: 100vw;
+}
+.fourthpbox{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    padding: 6vw 8vw;
+}
+.model-slider{
+  
+    width: 30%;
+
+}
+.model-slider h1{
+    font-size: 3vw;
+}
+.model-div:hover .redline{
+  width: 100%;
+}
+.model-div h1{
+  font-size: 1.5vw;
+}
+.model-div-inner{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    transition: all .4s ease-in-out;
+}
+.redline{
+    height: 3px;
+    background-color: red;
+    width: 0%;
+    transition: all .8s ease-in-out;
+}
+.redline:hover{
+    width: 100%;
+
+}
+.opened{
+    height: 100px;
+}
+.redlineactive{
+    width: 100%;
 }

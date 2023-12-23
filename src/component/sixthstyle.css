@@ -1,0 +1,90 @@
+.sixth-main{
+    height:100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+}
+.image-contt{
+    height: 70vh;
+    width: 65vw;
+    position: relative;
+}
+.image-contt img{
+ 
+    height: 100%;
+
+}
+.custom-main{
+    height: 70vh;
+    width: 33vw;
+    color: black;
+}
+.color-main{
+    display: flex;
+}
+.color-box{
+    height: 4vw;
+    width: 4vw;
+}
+.custom-main p{
+    font-weight: 200;
+    font-family: 'Dosis', sans-serif;
+
+}
+.red{
+    background-color: rgb(204,0,51);
+}
+.black{
+    background-color: rgb(0, 0, 0);
+}
+.metal-black{
+    background-color: rgb(0, 0, 0);
+}
+.white{
+    background-color: rgb(239,239,239);
+}
+.yellow{
+    background-color: rgb(255,204,0);
+}
+.grey{
+    background-color: rgb(204,204,204);
+}
+.navyblue{
+    background-color: rgb(0,25,75);
+}
+.maroon{
+    background-color: rgb(170,16,89);
+}
+.blue{
+    background-color: rgb(0,109,209);
+}
+.cream{
+    background-color: rgb(199,199,191);
+}
+.alloy-main
+{
+    display: flex;
+}
+.wheel{
+
+    height: 6vw;
+    width: 6vw;
+    margin-right: 2vw;
+}
+.wheel img{
+    height: 100%;
+}
+.slider-button{
+    margin: 0;
+    position: absolute;
+    height: 50px;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 0 20px;
+    font-size: 40px;
+    top: 50%;
+}

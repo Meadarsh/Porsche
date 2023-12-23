@@ -3,39 +3,57 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Canvas, applyProps, useFrame } from '@react-three/fiber'
 import { PerformanceMonitor, AccumulativeShadows, RandomizedLight, Environment, Lightformer, Float, useGLTF } from '@react-three/drei'
 import { LayerMaterial, Color, Depth } from 'lamina'
-
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 export function App() {
   const porscheRef=useRef()
+  const[rotation,setRotation]=useState([0,3,0])
+  const [porsche,setPorsche]=useState(<Porsche ref={porscheRef} scale={1.6} position={[-3, -0.18, 0]} rotation={rotation} />)
+  gsap.registerPlugin(ScrollTrigger)
   useEffect(() => {
-    const porsche = porscheRef.current;
-
-    if (porsche) {
-      
-      gsap.to(porsche.rotation, {
+    setTimeout(()=>{
+      console.log('runnnnning')
+      console.log(porscheRef.current)
+      gsap.to(porscheRef.current.rotation, {
         duration: 2,
         delay:5,
         x: 0,
-        y: Math.PI * 2,
+        y:6,
         z: 0,
         ease: 'power2.inOut',
        
       });
-    }})
-  const [degraded, degrade] = useState(true)
+    },3000)
+       
+    },[porscheRef.current])
+    useEffect(()=>{
+      gsap.to('.line',{
+        scrollTrigger:{
+          trigger:'.fpoverlay',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1,
+          markers:true,
+          onLeave:()=>{setPorsche()},
+          onEnterBack:()=>{setPorsche(<Porsche ref={porscheRef} scale={1.6} position={[-3, -0.18, 0]} rotation={rotation} />)}
+        }
+      })
+    })
+  const [degraded, degrade] = useState(false)
   return (
    
    
     <Canvas shadows camera={{ position: [5, 0, 15], fov: 30 }}>
       <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
       <ambientLight intensity={0.5} />
-      <Porsche ref={porscheRef} scale={1.6} position={[-3, -0.18, 0]} rotation={[0, Math.PI / 5, 0]} />
+       {porsche}
       <AccumulativeShadows position={[-2, -1.16, 0]} frames={100} alphaTest={0.9} scale={10}>
         <RandomizedLight amount={8} radius={10} ambient={0.5} position={[1, 5, -1]} />
       </AccumulativeShadows>
       {/** PerfMon will detect performance issues */}
       <PerformanceMonitor onDecline={() => degrade(true)} />
       {/* Renders contents "live" into a HDRI environment (scene.environment). */}
-      <Environment frames={degraded ? 1 :60} resolution={50} background blur={1}>
+      <Environment frames={degraded ? 1 :60} resolution={100} background blur={1}>
         <Lightformers />
       </Environment>
       <CameraRig />

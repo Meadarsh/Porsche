@@ -7,8 +7,10 @@ import FirstPage from './component/firstPage'
 import Secondp from './component/secondp'
 import Thirdp from './component/Thirdp'
 import Fourthp from './component/fourthp'
-
-
+import Fifthp from './component/fifthp'
+import Sixthpage from './component/sixthpage'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 createRoot(document.getElementById('root')).render(
   <>
     <div className='firstpdiv'>
@@ -18,5 +20,7 @@ createRoot(document.getElementById('root')).render(
       <Secondp/>
       <Thirdp/>
       <Fourthp/>
+      <Fifthp/>
+      <Sixthpage/>
   </>
 )
