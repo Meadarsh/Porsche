@@ -61,10 +61,10 @@ const Sixthpage = () => {
         <div className="alloy-main">
           
           <div onClick={()=>setAlloy(1)} className="wheel">
-            <img src="public/wheel-1.png" alt="N/A" />
+            <img src="/wheel-1.png" alt="N/A" />
           </div>
           <div onClick={()=>setAlloy(2)} className="wheel">
-            <img src="public/wheel-2.png" alt="N/A" />
+            <img src="/wheel-2.png" alt="N/A" />
           </div>
         </div>
       </div>
