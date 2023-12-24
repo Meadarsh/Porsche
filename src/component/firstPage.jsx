@@ -19,7 +19,7 @@ const FirstPage = () => {
             <h1>911 Carrera 4S</h1>
            </div>
         </div>
-         <img src="public/home.webp" alt="n/a" />
+         <img src="/home.webp" alt="n/a" />
     </div>
   )
 }
