@@ -16,6 +16,7 @@ const App = () => {
     <>
    
     <div className='firstpdiv'>
+       <img src="public/home.webp" alt="n/A" />
     <FirstPage/>
        </div>
        <Secondp/>
