@@ -72,6 +72,8 @@
     
 }
 .card{
+    pointer-events: all;
+    cursor: pointer;
 height: 100%;
 width: 21.25vw;
 padding: 1.5vw;
@@ -79,6 +81,10 @@ flex-shrink: 0;
 background-color: rgb(255, 255, 255);
 overflow: hidden;
 color: black;
+}
+.slider1inner-icon{
+    pointer-events: all;
+    cursor: pointer;
 }
 
 .card h3{

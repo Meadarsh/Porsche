@@ -8,6 +8,7 @@
 @tailwind utilities;
 * {
   box-sizing: border-box;
+  pointer-events: none;
 }
 ::-moz-selection { /* Code for Firefox */
  
@@ -61,15 +62,3 @@ svg {
   }
 }
 
-canvas {
-  opacity: 0;
-  touch-action: none;
-  animation: fade-in 5s ease 0.5s forwards;
-}
-.canvasdiv{
-  height: 100vh;
-  width: 100vw;
-  position:sticky;
-  top: 0;
-  left: 0px;
-}

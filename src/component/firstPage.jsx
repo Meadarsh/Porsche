@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 const FirstPage = () => {
     useEffect(()=>{
         gsap.to('.brand-name h4',{
-            margin:0,
+           y:'0vw',
             duration:1
         })
 

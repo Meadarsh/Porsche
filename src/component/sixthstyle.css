@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     padding-left: 2px;
+    pointer-events: all;
 }
 .image-contt{
     height: 70vh;
@@ -12,7 +13,7 @@
     position: relative;
 }
 .image-contt img{
- 
+    z-index: 11;
     height: 100%;
 
 }
@@ -25,6 +26,8 @@
     display: flex;
 }
 .color-box{
+    pointer-events: all;
+    cursor: pointer;
     height: 4vw;
     width: 4vw;
 }
@@ -68,13 +71,15 @@
     display: flex;
 }
 .wheel{
-
+    pointer-events: all;
+    cursor: pointer;
     height: 6vw;
     width: 6vw;
     margin-right: 2vw;
 }
 .wheel img{
     height: 100%;
+
 }
 .slider-button{
     margin: 0;
@@ -87,4 +92,10 @@
     padding: 0 20px;
     font-size: 40px;
     top: 50%;
+    z-index: 10;
+}
+.slider-button-icon{
+    pointer-events: all;
+cursor: pointer;
+   
 }

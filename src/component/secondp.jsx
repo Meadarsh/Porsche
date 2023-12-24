@@ -68,11 +68,11 @@ const Secondp = () => {
             </h1>
          </div>
          <div className='slider1inner'>
-         <BsArrowLeftCircle onClick={PrevImg}/>
+         <BsArrowLeftCircle className='slider1inner-icon' onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
          </div>
-         <BsArrowRightCircle onClick={NextImg}/>
+         <BsArrowRightCircle className='slider1inner-icon' onClick={NextImg}/>
          </div>
          <div className="sliderCarddiv">
            {Data.map((e)=>(

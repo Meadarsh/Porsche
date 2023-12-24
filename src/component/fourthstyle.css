@@ -26,6 +26,10 @@
 .model-div:hover .redline{
   width: 100%;
 }
+.model-div{
+    pointer-events: all;
+    cursor: pointer;
+}
 .model-div h1{
   font-size: 1.5vw;
 }
