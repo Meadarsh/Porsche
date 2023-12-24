@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background-image: url(/home.webp);
+    overflow:hidden;
 }
 .fpoverlay{
     height: 100vh;
