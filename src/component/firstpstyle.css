@@ -1,22 +1,26 @@
 .firstpdiv{
     height: 100vh;
     width: 100vw;
-    position: relative;
-    overflow:hidden;
+    overflow: hidden;
 }
 .fpoverlay{
     height: 100vh;
     width: 100vw;
-    position:absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+
    
 }
+.fpoverlay img{
+position: absolute;
+
+} 
 .fpoverlay-content{
+    position: absolute;
+    top: 0;
+    z-index: 100;
    height: 40vh;
    width: 100vw;
    margin-top: 15vh;
-
 }
 .brand-name{
     height: 7vw;
