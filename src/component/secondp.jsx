@@ -74,7 +74,7 @@ const Secondp = () => {
          <div className='slider1inner'>
          <BsArrowLeftCircle className='slider1inner-icon' onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
          </div>
          <BsArrowRightCircle className='slider1inner-icon' onClick={NextImg}/>
          </div>
