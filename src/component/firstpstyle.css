@@ -12,7 +12,7 @@
 }
 .fpoverlay img{
 position: absolute;
-
+width: 100%;
 } 
 .fpoverlay-content{
     position: absolute;
@@ -49,4 +49,5 @@ position: absolute;
     color: rgb(255, 255, 255);
    font-size: 3vw;
    font-weight: 200;
+   margin-left: 15px;
 }

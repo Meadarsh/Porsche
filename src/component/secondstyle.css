@@ -19,6 +19,7 @@
     height: 60%;
     width: 40%;
     margin:0 6vw;
+    pointer-events: all;
 }
 .secondp1cont-txt h1{
     font-size: 3vw;

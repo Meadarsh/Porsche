@@ -16,6 +16,7 @@ const App = () => {
     <>
    
     <div className='firstpdiv'>
+    
     <FirstPage/>
        </div>
        <Secondp/>

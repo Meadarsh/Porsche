@@ -14,7 +14,11 @@ const Secondp = () => {
       if(imgIndex<9){
          setImgIndex(imgIndex+1)
       }
+      
    }
+  function over(){
+   alert('hgf')
+  }
    let value;
    useEffect(()=>{
     
@@ -51,7 +55,7 @@ const Secondp = () => {
          <video  poster='/greenCarPre.webp' autoPlay loop muted >
          <source src="/greenCarVid.mp4" type="video/mp4"/>
          </video>
-         <div className="secondp1cont-txt">
+         <div className="secondp1cont-txt" onPointerOver={over}>
             <h1>
                The 911 Carrera
             </h1>
@@ -62,7 +66,7 @@ const Secondp = () => {
          </div>
         </div>
         <div className="slider">
-         <div className='sliderHeading'>
+         <div  className='sliderHeading' >
             <h1>
             911 Carrera T highlights.
             </h1>
@@ -70,7 +74,7 @@ const Secondp = () => {
          <div className='slider1inner'>
          <BsArrowLeftCircle className='slider1inner-icon' onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
+          <img src={`public/slider${imgIndex}.webp`} alt="n/a" />
          </div>
          <BsArrowRightCircle className='slider1inner-icon' onClick={NextImg}/>
          </div>
