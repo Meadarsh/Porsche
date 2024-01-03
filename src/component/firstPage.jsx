@@ -31,7 +31,7 @@ const FirstPage = () => {
             <h1>911</h1><h1 className='span2'>Carrera</h1> <h1 className='span3'>4S</h1>
            </div>
         </div>
-        <img src="public/home.webp" alt="" />
+        <img src="/home.webp" alt="" />
 
     </div>
   )
