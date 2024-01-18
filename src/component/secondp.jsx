@@ -16,9 +16,21 @@ const Secondp = () => {
       }
       
    }
-  function over(){
-   alert('hgf')
-  }
+
+
+const arrayImg =[1,2,3,4,5,6,7,8,9]
+
+
+
+
+
+
+
+
+
+
+
+
    let value;
    useEffect(()=>{
     
@@ -41,11 +53,9 @@ const Secondp = () => {
      x:`${value}vw`,
      duration:.3
      })
-     gsap.from('.sliderImg img',{
-      opacity:0
-     })
-     gsap.to('.sliderImg img',{
-      opacity:1,
+
+     gsap.to('.imgSlider',{
+      xPercent:(-11.11111*(imgIndex-1)),
       duration:.8
      })
    },[imgIndex])
@@ -55,7 +65,7 @@ const Secondp = () => {
          <video  poster='/greenCarPre.webp' autoPlay loop muted >
          <source src="/greenCarVid.mp4" type="video/mp4"/>
          </video>
-         <div className="secondp1cont-txt" onPointerOver={over}>
+         <div className="secondp1cont-txt" >
             <h1>
                The 911 Carrera
             </h1>
@@ -74,7 +84,10 @@ const Secondp = () => {
          <div className='slider1inner'>
          <BsArrowLeftCircle className='slider1inner-icon' onClick={PrevImg}/>
          <div className="sliderImg">  
-          <img src={`/slider${imgIndex}.webp`} alt="n/a" />
+         <div className="imgSlider">
+         {arrayImg.map((e)=>( <img src={`/slider${e}.webp`} alt="n/a" />))}
+
+         </div>
          </div>
          <BsArrowRightCircle className='slider1inner-icon' onClick={NextImg}/>
          </div>

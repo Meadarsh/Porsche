@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./sixthstyle.css";
 import gsap from "gsap";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css';
 const Sixthpage = () => {
   const [picIndex, setPicIndex] = useState(1);
   const [color, setColor] = useState(1);
@@ -19,7 +24,7 @@ const Sixthpage = () => {
     ".blue",
     ".cream",
   ];
-
+const arrFor6img =[3,2,3,4,5,6]
   useEffect(() => {
     gsap.to(".color-box", {
       border: "2px solid transparent",
@@ -30,42 +35,22 @@ const Sixthpage = () => {
       boxShadow: "rgba(0, 0, 0, 0.44) 0px 3px 8px",
     });
   }, [color]);
-  useEffect(() => {
-    gsap.from(".image-contt img", {
-      opacity: 0,
-    });
-    gsap.to(".image-contt img", {
-      opacity: 1,
-      duration: 0.3,
-    });
-  }, [picIndex]);
   return (
     <div className="sixth-main">
-      <div className="image-contt">
-        <div className="slider-button">
-          <div
-            className="slider-button-icon"
-            onClick={() => {
-              if (picIndex > 1) setPicIndex(picIndex - 1);
-            }}
-          >
-            <BsArrowLeftCircle />
-          </div>
-          <div
-            className="slider-button-icon"
-            onClick={() => {
-              if (picIndex < 6) {
-                setPicIndex(picIndex + 1);
-              } else setPicIndex(1);
-            }}
-          >
-            <BsArrowRightCircle />
-          </div>
-        </div>
-        <img
-          src={`/customiztion/porsche-${picIndex}${color}${alloy}.jpeg`}
-          alt="N/A"
-        />
+      <div className="image-contt">      
+         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+    >
+     {arrFor6img.map((e,index)=>(
+      <SwiperSlide><img key={index}
+      src={`/customiztion/porsche-${e}${color}${alloy}.jpeg`}
+      alt="N/A"
+    /></SwiperSlide>
+     )) }
+    </Swiper>
       </div>
       <div className="custom-main">
         <h2>Exterior Color</h2>
@@ -99,10 +84,10 @@ const Sixthpage = () => {
         <h2>Wheels</h2>
         <div className="alloy-main">
           <div onClick={() => setAlloy(1)} className="wheel">
-            <img src="public/wheel-1.png" alt="N/A" />
+            <img src="/wheel-1.png" alt="N/A" />
           </div>
           <div onClick={() => setAlloy(2)} className="wheel">
-            <img src="public/wheel-2.png" alt="N/A" />
+            <img src="/wheel-2.png" alt="N/A" />
           </div>
         </div>
       </div>

@@ -8,7 +8,6 @@
 @tailwind utilities;
 * {
   box-sizing: border-box;
-  pointer-events: none;
 }
 ::-moz-selection { /* Code for Firefox */
  
