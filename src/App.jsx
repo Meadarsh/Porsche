@@ -9,8 +9,22 @@ import Fourthp from './component/fourthp'
 import Fifthp from './component/fifthp'
 import Sixthpage from './component/sixthpage'
 import Contact from './component/contact'
+import Lenis from "@studio-freight/lenis";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
+import gsap from "gsap";
 
 const App = () => {
+  useEffect(()=>{
+    const lenis = new Lenis()
+    lenis.on('scroll', ScrollTrigger.update)
+    
+    gsap.ticker.add((time)=>{
+      lenis.raf(time * 1000)
+    })
+    gsap.ticker.lagSmoothing(0)
+    
+  })
+  
   
   return (
     <>

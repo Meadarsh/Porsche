@@ -41,6 +41,7 @@ const arrFor6img =[3,2,3,4,5,6]
          <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           navigation
+          loop={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
     >
